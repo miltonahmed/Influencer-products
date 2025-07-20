@@ -133,6 +133,12 @@ $font-inter: 'Inter', sans-serif;
 $text-nav-color: #3a3a3a;
 $hero-text-color: #3a3a3a;
 $white-color: #ffffff;
+$--gradient-border-color: linear-gradient(
+  90deg,
+  rgba(192, 204, 218, 0.1) 0%,
+  rgba(192, 204, 218, 0.6) 50.38%,
+  rgba(192, 204, 218, 0.1) 100%
+);
 
 .container {
   max-width: 1200px;
