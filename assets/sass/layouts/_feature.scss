@@ -1,0 +1,92 @@
+.feature {
+  padding: 80px 0;
+  background-color: $white-color;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 96px;
+    max-width: 1110px;
+    margin: 0 auto;
+
+    @include respond(md) {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 40px;
+    }
+  }
+
+  &__img {
+    flex: 1;
+    max-width: 404px;
+
+    @include respond(md) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 610px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond(md) {
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 2.735rem;
+      font-weight: 700;
+      line-height: 4.325rem;
+      color: #0a0826;
+
+      @include respond(md) {
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: normal;
+      }
+    }
+
+    p {
+      font-family: $font-poppins;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #6c6c6c;
+      margin-top: 16px;
+      line-height: 1.6;
+      max-width: 501px;
+      width: 100%;
+
+      @include respond(md) {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #e02c6d;
+      color: $white-color;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 24px;
+      cursor: pointer;
+
+      @include respond(md) {
+        margin: 10px auto;
+      }
+    }
+  }
+}
