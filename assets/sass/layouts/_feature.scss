@@ -36,9 +36,9 @@
   &__content {
     flex: 1;
     max-width: 610px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
 
     @include respond(md) {
       align-items: center;
