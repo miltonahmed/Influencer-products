@@ -1,0 +1,69 @@
+@import '../mixin';
+
+.navbar {
+  background-color: #fff;
+  padding: 16px 0;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1000;
+
+  &__wrapper {
+    flex-wrap: nowrap;
+  }
+
+  &__toggle {
+    display: none; // desktop এ hide
+
+    @include respond(md) {
+      display: block; // small screen এ show করো
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+      order: 1; // বামে থাকবে
+    }
+  }
+
+  &__logo {
+    font-family: $font-poppins;
+    font-weight: 700;
+    font-size: 22px;
+    color: $text-nav-color;
+    text-align: left;
+    order: 0; // বামে বা মাঝখানে রাখতে চাইলে adjust করো
+
+    @include respond(md) {
+      flex: 1 1 100%;
+      text-align: center;
+      order: 2; // ছোট ডিভাইসে মাঝখানে
+    }
+  }
+
+  &__nav {
+    gap: 32px;
+
+    @include respond(md) {
+      display: none; // small screen এ hide
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      flex-direction: column;
+      gap: 10px;
+      padding: 16px 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+
+      &--active {
+        display: flex; // toggle করলে দেখাবে
+      }
+    }
+  }
+
+  &__nav-link {
+    font-family: $font-poppins;
+    font-size: 16px;
+    color: $text-nav-color;
+    font-weight: 600;
+  }
+}

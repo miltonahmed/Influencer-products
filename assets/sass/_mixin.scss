@@ -1,0 +1,52 @@
+// mixins.scss
+
+$breakpoints: (
+  'xxl': 1400px,
+  'xl': 1200px,
+  'lg': 992px,
+  'md': 768px,
+  'sm': 576px,
+  'xs': 480px,
+);
+
+@mixin respond($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value != null {
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not found in \$breakpoints map.";
+  }
+}
+
+// Responsive container
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include respond(xl) {
+    max-width: 1140px;
+  }
+
+  @include respond(lg) {
+    max-width: 960px;
+  }
+
+  @include respond(md) {
+    max-width: 720px;
+  }
+
+  @include respond(sm) {
+    max-width: 540px;
+  }
+
+  @include respond(xs) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

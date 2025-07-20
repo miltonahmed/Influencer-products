@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  display: inline-block;
+}
+
+img {
+  vertical-align: middle;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 0.8;
+}
+
+span,
+div,
+li,
+ul,
+ol,
+img,
+a {
+  margin: 0;
+
+  padding: 0;
+}
+$text_align: left, right, center, justify;
+@each $i in $text_align {
+  .text-#{$i} {
+    text-align: $i;
+  }
+}
+
+/* Margin & Padding */
+
+@for $i from 1 through 10 {
+  .pt-#{$i * 10} {
+    padding-top: $i * 10px;
+  }
+
+  .pb-#{$i * 10} {
+    padding-bottom: $i * 10px;
+  }
+
+  .mt-#{$i * 10} {
+    margin-top: $i * 10px;
+  }
+  .mb-#{$i * 10} {
+    margin-bottom: $i * 10px;
+  }
+}
+
+$list: left, center, right, justify;
+@each $i in $list {
+  .text-#{$i} {
+    text-align: $i;
+  }
+}
+
+// flexbox
+$flex: flex, inline-flex;
+@each $flex in $flex {
+  .#{$flex} {
+    display: $flex;
+  }
+}
+// flex detraction
+$flex-direction: row, row-reverse, column, column-reverse;
+@each $single in $flex-direction {
+  .#{$single} {
+    flex-direction: $single;
+  }
+}
+// Justify-content
+$justify: flex-start, flex-end, center, space-between, space-around,
+  space-evenly;
+@each $justify in $justify {
+  .justify-#{$justify} {
+    justify-content: $justify;
+  }
+}
+
+// Align
+$aligns: flex-start, flex-end, center, space-between, space-around, space-evenly;
+@each $align in $aligns {
+  .align-#{$align} {
+    align-content: $align;
+  }
+}
+// items
+$items: flex-start, flex-end, center, baseline, stretch;
+@each $item in $items {
+  .align-#{$item} {
+    align-items: $item;
+  }
+}
+$align: left, center, right, justify;
+@each $align in $align {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}
+$case: lowercase, capitalize, uppercase;
+@each $case in $case {
+  .#{$case} {
+    text-transform: $case;
+  }
+}
+// Variable
+$font-poppins: 'Poppins', sans-serif;
+$font-inter: 'Inter', sans-serif;
+$text-nav-color: #3a3a3a;
+$white-color: #ffffff;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
