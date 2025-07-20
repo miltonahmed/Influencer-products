@@ -1,0 +1,72 @@
+@import '../mixin';
+
+.hero {
+  padding: 80px 0;
+  background-color: $white-color;
+
+  &__wrapper {
+    gap: 40px;
+    @include respond(md) {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 24px;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 505px;
+    align-items: center;
+
+    h1 {
+      font-size: 3.25rem;
+      font-weight: 700;
+      line-height: 4.325rem;
+      color: $hero-text-color;
+
+      @include respond(md) {
+        font-size: 2rem;
+        text-align: center;
+        line-height: normal;
+      }
+    }
+    p {
+      font-family: $font-poppins;
+      font-size: 1rem;
+      font-weight: 600;
+      color: $hero-text-color;
+      margin-top: 16px;
+      line-height: normal;
+      @include respond(md) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__img {
+    flex: 1;
+    position: relative;
+    max-width: 440px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 2;
+      object-fit: cover;
+    }
+
+    &-shape {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

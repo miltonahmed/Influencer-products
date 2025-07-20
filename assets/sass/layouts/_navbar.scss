@@ -16,8 +16,8 @@
 
     @include respond(md) {
       display: block; // small screen এ show করো
-      font-size: 24px;
-      color: #333;
+      font-size: 1.5rem;
+      color: $font-poppins;
       cursor: pointer;
       order: 1; // বামে থাকবে
     }
@@ -26,7 +26,7 @@
   &__logo {
     font-family: $font-poppins;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 1.25rem;
     color: $text-nav-color;
     text-align: left;
     order: 0; // বামে বা মাঝখানে রাখতে চাইলে adjust করো
@@ -62,7 +62,7 @@
 
   &__nav-link {
     font-family: $font-poppins;
-    font-size: 16px;
+    font-size: 1rem;
     color: $text-nav-color;
     font-weight: 600;
   }
