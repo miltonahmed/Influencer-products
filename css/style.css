@@ -568,9 +568,25 @@ a {
   margin-top: 16px;
   line-height: normal;
 }
+.hero__content button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e02c6d;
+  color: #ffffff;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 24px;
+  cursor: pointer;
+  border-radius: 41px;
+  -webkit-border-radius: 41px;
+  -moz-border-radius: 41px;
+  -ms-border-radius: 41px;
+  -o-border-radius: 41px;
+}
 @media (max-width: 768px) {
-  .hero__content p {
-    font-size: 1rem;
+  .hero__content button {
+    margin: 10px auto;
   }
 }
 .hero__img {

@@ -37,8 +37,25 @@
       color: $hero-text-color;
       margin-top: 16px;
       line-height: normal;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #e02c6d;
+      color: $white-color;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 24px;
+      cursor: pointer;
+      border-radius: 41px;
+      -webkit-border-radius: 41px;
+      -moz-border-radius: 41px;
+      -ms-border-radius: 41px;
+      -o-border-radius: 41px;
+
       @include respond(md) {
-        font-size: 1rem;
+        margin: 10px auto;
       }
     }
   }
